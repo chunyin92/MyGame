@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 6359eef1677b0e447abb0bd708fe29c7
+timeCreated: 1508914902
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: DirtBottom01
+    100002: DirtBottom02
+    100004: DirtBottom03
+    100006: DirtBottom04
+    100008: GrassTop01
+    100010: GrassTop02
+    100012: GrassTop03
+    100014: GrassTop04
+    100016: SandBottom01
+    100018: SandBottom02
+    100020: SandBottom03
+    100022: SandBottom04
+    100024: SandBottom05
+    100026: SandBottom06
+    100028: SandBottom07
+    100030: SandTop01
+    100032: SandTop02
+    100034: SandTop03
+    100036: SandTop04
+    100038: SandTop05
+    100040: SandTop06
+    100042: SandTop07
+    100044: Stone_a01
+    100046: Stone_a02
+    100048: Stone_b01
+    100050: Stone_b02
+    100052: //RootNode
+    400000: DirtBottom01
+    400002: DirtBottom02
+    400004: DirtBottom03
+    400006: DirtBottom04
+    400008: GrassTop01
+    400010: GrassTop02
+    400012: GrassTop03
+    400014: GrassTop04
+    400016: SandBottom01
+    400018: SandBottom02
+    400020: SandBottom03
+    400022: SandBottom04
+    400024: SandBottom05
+    400026: SandBottom06
+    400028: SandBottom07
+    400030: SandTop01
+    400032: SandTop02
+    400034: SandTop03
+    400036: SandTop04
+    400038: SandTop05
+    400040: SandTop06
+    400042: SandTop07
+    400044: Stone_a01
+    400046: Stone_a02
+    400048: Stone_b01
+    400050: Stone_b02
+    400052: //RootNode
+    2300000: DirtBottom01
+    2300002: DirtBottom02
+    2300004: DirtBottom03
+    2300006: DirtBottom04
+    2300008: GrassTop01
+    2300010: GrassTop02
+    2300012: GrassTop03
+    2300014: GrassTop04
+    2300016: SandBottom01
+    2300018: SandBottom02
+    2300020: SandBottom03
+    2300022: SandBottom04
+    2300024: SandBottom05
+    2300026: SandBottom06
+    2300028: SandBottom07
+    2300030: SandTop01
+    2300032: SandTop02
+    2300034: SandTop03
+    2300036: SandTop04
+    2300038: SandTop05
+    2300040: SandTop06
+    2300042: SandTop07
+    2300044: Stone_a01
+    2300046: Stone_a02
+    2300048: Stone_b01
+    2300050: Stone_b02
+    3300000: DirtBottom01
+    3300002: DirtBottom02
+    3300004: DirtBottom03
+    3300006: DirtBottom04
+    3300008: GrassTop01
+    3300010: GrassTop02
+    3300012: GrassTop03
+    3300014: GrassTop04
+    3300016: SandBottom01
+    3300018: SandBottom02
+    3300020: SandBottom03
+    3300022: SandBottom04
+    3300024: SandBottom05
+    3300026: SandBottom06
+    3300028: SandBottom07
+    3300030: SandTop01
+    3300032: SandTop02
+    3300034: SandTop03
+    3300036: SandTop04
+    3300038: SandTop05
+    3300040: SandTop06
+    3300042: SandTop07
+    3300044: Stone_a01
+    3300046: Stone_a02
+    3300048: Stone_b01
+    3300050: Stone_b02
+    4300000: Stone_b01
+    4300002: DirtBottom02
+    4300004: GrassTop03
+    4300006: GrassTop02
+    4300008: DirtBottom01
+    4300010: GrassTop01
+    4300012: DirtBottom03
+    4300014: Stone_a01
+    4300016: DirtBottom04
+    4300018: GrassTop04
+    4300020: Stone_a02
+    4300022: Stone_b02
+    4300024: SandTop01
+    4300026: SandTop02
+    4300028: SandTop03
+    4300030: SandTop04
+    4300032: SandTop07
+    4300034: SandTop05
+    4300036: SandTop06
+    4300038: SandBottom01
+    4300040: SandBottom02
+    4300042: SandBottom03
+    4300044: SandBottom04
+    4300046: SandBottom05
+    4300048: SandBottom06
+    4300050: SandBottom07
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

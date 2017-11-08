@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64436a6717abfb34991b56308fed3d51, type: 3}
+  m_Name: CharacterDatabase
+  m_EditorClassIdentifier: 
+  database:
+  - _name: Tom
+    _icon: {fileID: 21300000, guid: affd1fe1ad0f5424993eb89a104195d6, type: 3}
+    _prefab: {fileID: 123160, guid: e4bfd2c03834b1b4092ec60ed4b750e1, type: 2}
+    _description: 
+    _baseHP: 74
+    _baseMP: 100
+    _baseAttack: 31
+    _baseDefense: 79
+    _basetalent: 60
+    _baseSpeed: 0
+    _baseCriticalRate: 46
+    _baseCriticalDamage: 45
+    _skillData:
+    - _name: Punch
+      _icon: {fileID: 0}
+      _description: 
+      _basePower: 14
+      _cooldown: 2
+      _manaCost: 69
+      _accuarcy: 47
+      _targetType: 2
+      _effect:
+      - _conditionType: 0
+        _probability: 100
+        _targetType: 3
+        _effectType: 0
+        _percentage: 100
+        _duration: 1
+    - _name: Ice Ballaaa
+      _icon: {fileID: 21300000, guid: e7eaf7d618b0c3c468d4bd10aac4e287, type: 3}
+      _description: Ice
+      _basePower: 10
+      _cooldown: 1
+      _manaCost: 80
+      _accuarcy: 29
+      _targetType: 2
+      _effect:
+      - _conditionType: 1
+        _probability: 100
+        _targetType: 2
+        _effectType: 1
+        _percentage: 82
+        _duration: 5
+  - _name: Howie
+    _icon: {fileID: 21300000, guid: 4fe957058f79ca546b1e65cf97bf5a7a, type: 3}
+    _prefab: {fileID: 121828, guid: 8e223665f56bde5418d19d7c1de59763, type: 2}
+    _description: 
+    _baseHP: 66
+    _baseMP: 59
+    _baseAttack: 100
+    _baseDefense: 102
+    _basetalent: 107
+    _baseSpeed: 78
+    _baseCriticalRate: 51
+    _baseCriticalDamage: 60
+    _skillData:
+    - _name: Ice Ballaaa
+      _icon: {fileID: 21300000, guid: e7eaf7d618b0c3c468d4bd10aac4e287, type: 3}
+      _description: Ice
+      _basePower: 10
+      _cooldown: 4
+      _manaCost: 80
+      _accuarcy: 29
+      _targetType: 1
+      _effect:
+      - _conditionType: 1
+        _probability: 100
+        _targetType: 2
+        _effectType: 1
+        _percentage: 82
+        _duration: 5
+    - _name: Fire Ballaa
+      _icon: {fileID: 21300000, guid: 1ba52a5bb5bbf9548a86fe2bf1545759, type: 3}
+      _description: aaa
+      _basePower: 5
+      _cooldown: 1
+      _manaCost: 65
+      _accuarcy: 61
+      _targetType: 2
+      _effect:
+      - _conditionType: 1
+        _probability: 100
+        _targetType: 4
+        _effectType: 102
+        _percentage: 82
+        _duration: 2
+    - _name: Punch
+      _icon: {fileID: 0}
+      _description: 
+      _basePower: 14
+      _cooldown: 3
+      _manaCost: 69
+      _accuarcy: 47
+      _targetType: 3
+      _effect:
+      - _conditionType: 0
+        _probability: 100
+        _targetType: 3
+        _effectType: 0
+        _percentage: 100
+        _duration: 1
+    - _name: Kick
+      _icon: {fileID: 0}
+      _description: 
+      _basePower: 14
+      _cooldown: 2
+      _manaCost: 63
+      _accuarcy: 34
+      _targetType: 1
+      _effect:
+      - _conditionType: 1
+        _probability: 41
+        _targetType: 4
+        _effectType: 53
+        _percentage: 61
+        _duration: 8
+  - _name: Moyi
+    _icon: {fileID: 21300000, guid: 74c8011c8d2b0794eb4dd46f95f18a1c, type: 3}
+    _prefab: {fileID: 128392, guid: 155edb5129b20b5409bebec823646700, type: 2}
+    _description: 
+    _baseHP: 10
+    _baseMP: 107
+    _baseAttack: 64
+    _baseDefense: 74
+    _basetalent: 84
+    _baseSpeed: 0
+    _baseCriticalRate: 57
+    _baseCriticalDamage: 48
+    _skillData:
+    - _name: Punch
+      _icon: {fileID: 0}
+      _description: 
+      _basePower: 14
+      _cooldown: 2
+      _manaCost: 69
+      _accuarcy: 47
+      _targetType: 2
+      _effect:
+      - _conditionType: 0
+        _probability: 100
+        _targetType: 3
+        _effectType: 0
+        _percentage: 100
+        _duration: 1
+  - _name: Charles
+    _icon: {fileID: 21300000, guid: 34625bac93a9dbf4bbcb44044ede6f4c, type: 3}
+    _prefab: {fileID: 129730, guid: 9d3abb974994a9d48bb084cf0c04aa4b, type: 2}
+    _description: 
+    _baseHP: 21
+    _baseMP: 95
+    _baseAttack: 97
+    _baseDefense: 79
+    _basetalent: 93
+    _baseSpeed: 26
+    _baseCriticalRate: 57
+    _baseCriticalDamage: 64
+    _skillData:
+    - _name: Ice Ballaaa
+      _icon: {fileID: 21300000, guid: e7eaf7d618b0c3c468d4bd10aac4e287, type: 3}
+      _description: Ice
+      _basePower: 10
+      _cooldown: 4
+      _manaCost: 80
+      _accuarcy: 29
+      _targetType: 1
+      _effect:
+      - _conditionType: 1
+        _probability: 100
+        _targetType: 2
+        _effectType: 1
+        _percentage: 82
+        _duration: 5
