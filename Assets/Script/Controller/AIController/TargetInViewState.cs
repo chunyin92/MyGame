@@ -34,6 +34,7 @@ public class TargetInViewState : State<AIController>
 
     public override void EnterState (AIController owner)
     {
+        owner.OnSeeingTargetAction ();
         owner.OnSeeCharacter.Invoke ();
 
         owner.lastKnownPosition = owner.PlayerTarget.position;

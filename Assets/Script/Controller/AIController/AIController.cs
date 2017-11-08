@@ -9,12 +9,14 @@ public class AIController : MonoBehaviour
     public StateMachine<AIController> stateMachine { get; set; }
 
     public float viewRadius = 5f;
-    [Range(0,360)]
-    public float viewAngle = 45;
+    [Range (0, 90)]
+    public float viewAngle = 60;
+    [Range (0, 90)]
+    public float viewVertAngle = 50;
+
     public float roamRadius = 5f;    
     public Transform PlayerTarget;
 
-    // TODO make public field private and create a public method that return the private value??
     public float distance;
     Vector3 direction;
     Vector3 rotDirection;
@@ -26,8 +28,6 @@ public class AIController : MonoBehaviour
 
     [HideInInspector]
     public NavMeshAgent myNavMeshAgent;
-    //[HideInInspector]
-    //public BehaviorsInfo myBehaviorsInfo;
     Vector3 startPos;
 
     public List<WayPoint> wayPoints = new List<WayPoint> ();
@@ -40,12 +40,9 @@ public class AIController : MonoBehaviour
 
     public virtual void Start ()
     {
-        stateMachine = new StateMachine<AIController> (this);
-
         myNavMeshAgent = GetComponent<NavMeshAgent> ();
-        //myBehaviorsInfo = GetComponent<BehaviorsInfo> ();
         startPos = transform.position;
-
+        stateMachine = new StateMachine<AIController> (this);
         stateMachine.ChangeState (IdleState.Instance);
     }
 	
@@ -54,7 +51,7 @@ public class AIController : MonoBehaviour
         stateMachine.Update ();
     }
 
-    public virtual void SpecificAction ()
+    public virtual void OnSeeingTargetAction ()
     {
 
     }
@@ -62,14 +59,6 @@ public class AIController : MonoBehaviour
     public void CheckPlayerDistance (Transform target)
     {
         distance = Vector3.Distance (target.position, transform.position);
-
-        //if (distance > viewRadius && stateMachine.currentState != IdleState.Instance)
-        //{
-        //    stateMachine.ChangeState (IdleState.Instance);
-        //}else if (distance < viewRadius && stateMachine.currentState != TargetInRangeState.Instance)
-        //{
-        //    stateMachine.ChangeState (TargetInRangeState.Instance);
-        //}
     }
 
     public void IsClearView (Transform target)
@@ -78,15 +67,13 @@ public class AIController : MonoBehaviour
 
         RaycastHit hit;
         Vector3 origin = transform.position;
-        Debug.DrawRay (origin, direction * viewRadius);
+        Debug.DrawRay (origin, direction * viewRadius, Color.red);
 
-        if (Physics.Raycast(origin,direction,out hit, viewRadius))
+        if (Physics.Raycast (origin, direction, out hit, viewRadius))
         {
             //Debug.Log (hit.transform.name);
-            if (hit.transform.CompareTag("Player"))
-            {
+            if (hit.transform.CompareTag ("Player"))
                 isClear = true;
-            }
         }
     }
 
@@ -95,9 +82,10 @@ public class AIController : MonoBehaviour
         if (rotDirection == Vector3.zero)
             rotDirection = transform.forward;
 
-        float angle = Vector3.Angle (transform.forward, rotDirection);
+        float horiAngle = Vector3.Angle (transform.forward, rotDirection);
+        float vertAngle = Vector3.Angle (direction, rotDirection);
 
-        isInAngle = (angle < viewAngle);
+        isInAngle = (horiAngle < viewAngle && vertAngle < viewVertAngle);
     }
 
     public void RotateTowardsTarget ()
@@ -130,8 +118,7 @@ public class AIController : MonoBehaviour
     public void MoveToPosition (Vector3 targetPos)
     {
         myNavMeshAgent.isStopped = false;
-        //myNavMeshAgent.SetDestination (targetPos);
-        myNavMeshAgent.destination = targetPos;
+        myNavMeshAgent.SetDestination (targetPos);
     }
 
     public void StopMoving ()
@@ -148,7 +135,7 @@ public class AIController : MonoBehaviour
         Vector3 finalPosition = hit.position;
 
         //if (!myNavMeshAgent.pathPending)
-        myNavMeshAgent.destination = finalPosition;
+        myNavMeshAgent.SetDestination (finalPosition);
     }
 
     void OnDrawGizmos ()
@@ -156,9 +143,17 @@ public class AIController : MonoBehaviour
         //Gizmos.DrawWireSphere (startPos, roamRadius);
         Gizmos.DrawWireSphere (transform.position, viewRadius);
 
-        //Gizmos.color = Color.red;
-        //Vector3 a = new Vector3 (Mathf.Sin (viewAngle * Mathf.Deg2Rad), 0, Mathf.Cos (viewAngle * Mathf.Deg2Rad));
-        //Gizmos.DrawRay (transform.position, transform.position + a / 2 * viewRadius);
-        //Gizmos.DrawRay (transform.position, transform.position - a / 2 * viewRadius);
+        Gizmos.color = Color.yellow;
+        Vector3 vector = Quaternion.Euler (0, viewAngle, 0) * transform.forward;
+        Vector3 vector2 = Quaternion.Euler (0, -viewAngle, 0) * transform.forward;
+        Gizmos.DrawRay (transform.position, vector * viewRadius);
+        Gizmos.DrawRay (transform.position, vector2 * viewRadius);
+        Gizmos.color = Color.black;
+        Vector3 vector3 = Quaternion.AngleAxis (viewVertAngle, Vector3.left) * transform.forward;
+        Gizmos.DrawRay (transform.position, vector3 * viewRadius);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay (transform.position, rotDirection * viewRadius);
+        
     }
 }

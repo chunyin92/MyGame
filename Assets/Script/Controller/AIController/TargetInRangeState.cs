@@ -34,7 +34,6 @@ public class TargetInRangeState : State<AIController>
 
     public override void EnterState (AIController owner)
     {
-        owner.SpecificAction ();
         AIBehaviors.PatrolBehaviorEnter (owner);
         Debug.Log ("Target In Range");
     }

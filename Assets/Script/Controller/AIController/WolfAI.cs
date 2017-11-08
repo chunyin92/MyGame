@@ -14,9 +14,9 @@ public class WolfAI : AIController
         base.Update ();
 	}
 
-    public override void SpecificAction ()
+    public override void OnSeeingTargetAction ()
     {
-        base.SpecificAction ();
+        base.OnSeeingTargetAction ();
         Debug.Log ("I am a Wolf and I am attacking you");
     }
 }
